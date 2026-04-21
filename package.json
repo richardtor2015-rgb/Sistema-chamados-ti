@@ -1,0 +1,38 @@
+{
+  "name": "qa-automation-repo",
+  "version": "1.0.0",
+  "description": "Projeto de automação de testes E2E com Cypress e TypeScript",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:smoke": "cypress run --spec 'cypress/e2e/smoke/**/*.cy.ts'",
+    "cy:regression": "cypress run --spec 'cypress/e2e/regression/**/*.cy.ts'",
+    "cy:api": "cypress run --spec 'cypress/e2e/api/**/*.cy.ts'",
+    "cy:report": "cypress run --reporter mochawesome --reporter-options reportDir=cypress/reports,overwrite=false,html=true,json=true",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.0",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  },
+  "keywords": [
+    "cypress",
+    "typescript",
+    "qa",
+    "automation",
+    "e2e",
+    "testing"
+  ],
+  "author": "Seu Nome",
+  "license": "MIT"
+}
